@@ -1,0 +1,17 @@
+{
+  "dandiset_id": "001375",
+  "model": "openai/gpt-4o",
+  "prompt": "prompt-d-6.txt",
+  "total_prompt_tokens": 192488,
+  "total_completion_tokens": 3559,
+  "total_vision_prompt_tokens": 1188,
+  "total_vision_completion_tokens": 97,
+  "elapsed_time_seconds": 202.67202162742615,
+  "timestamp": "2025-04-18 21:55:24",
+  "system_info": {
+    "platform": "Linux-5.10.234-225.921.amzn2.x86_64-x86_64-with-glibc2.39",
+    "hostname": "jupyter-magland",
+    "processor": "x86_64",
+    "python_version": "3.11.10"
+  }
+}
