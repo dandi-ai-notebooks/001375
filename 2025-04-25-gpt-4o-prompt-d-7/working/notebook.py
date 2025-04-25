@@ -40,9 +40,9 @@ print(f"Dandiset URL: {metadata['url']}")
 # List the assets in the Dandiset
 assets = list(dandiset.get_assets())
 print(f"\nFound {len(assets)} assets in the dataset")
-print("\nFirst 5 assets:")
-for asset in assets[:5]:
-    print(f"- {asset.path}")
+print("\nAssets:")
+for i, asset in enumerate(assets, start=1):
+    print(f"{i}. {asset.path}")
 
 # %% [markdown]
 # ## Loading an NWB File
@@ -50,7 +50,8 @@ for asset in assets[:5]:
 # %%
 # Load NWB file using PyNWB and the provided URL
 url = "https://api.dandiarchive.org/api/assets/ce525828-8534-4b56-9e47-d2a34d1aa897/download/"
-remote_file = remfile.File(url)
+# Here you can iterate over the assets or let the user select
+remote_file = remfile.File(assets[0].get_content_url(follow_redirects=1, strip_query=True))
 h5_file = h5py.File(remote_file, 'r')
 io = pynwb.NWBHDF5IO(file=h5_file, mode='r')
 nwb = io.read()
@@ -73,11 +74,13 @@ plt.show()
 # %%
 time_series = nwb.acquisition['time_series']
 data_segment = time_series.data[0:1000, 0]  # Small subset for visualization
+sampling_rate = time_series.rate
+time_axis = np.arange(data_segment.shape[0]) / sampling_rate
 plt.figure(figsize=(10, 4))
-plt.plot(data_segment)
-plt.title('Time Series Data Segment')
-plt.xlabel('Sample Index')
-plt.ylabel('Amplitude (mV)')
+plt.plot(time_axis, data_segment)
+plt.title('Time Series Data Segment from Channel 0')
+plt.xlabel('Time (seconds)')
+plt.ylabel(f'Amplitude ({time_series.unit})')
 plt.show()
 
 # %% [markdown]
@@ -88,7 +91,7 @@ trials_df = nwb.trials.to_dataframe()
 plt.figure(figsize=(10, 4))
 plt.hist(trials_df['start_time'], bins=50, color='green', alpha=0.7)
 plt.title('Histogram of Trial Start Times')
-plt.xlabel('Start Time')
+plt.xlabel('Start Time (seconds)')
 plt.ylabel('Frequency')
 plt.show()
 
@@ -97,5 +100,7 @@ plt.show()
 # This notebook provides an overview of Dandiset 001375, focusing on loading and visualizing NWB data. Future directions could involve more detailed analysis of the electrophysiological data and more complex visualizations. 
 
 # Close NWB file
-io.close()
+# Clarify trial conditions
+print(f"Trial names: {trials_df.columns.values}")
+print(f"Example trial: {trials_df.iloc[0].to_dict()}")
 remote_file.close()
