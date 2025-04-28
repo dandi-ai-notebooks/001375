@@ -1,0 +1,17 @@
+{
+  "dandiset_id": "001375",
+  "model": "google/gemini-2.0-flash-001",
+  "prompt": "prompt-d-8.txt",
+  "total_prompt_tokens": 904032,
+  "total_completion_tokens": 13650,
+  "total_vision_prompt_tokens": 21604,
+  "total_vision_completion_tokens": 435,
+  "elapsed_time_seconds": 207.2193193435669,
+  "timestamp": "2025-04-28 13:44:36",
+  "system_info": {
+    "platform": "Linux-5.10.235-227.919.amzn2.x86_64-x86_64-with-glibc2.39",
+    "hostname": "jupyter-magland",
+    "processor": "x86_64",
+    "python_version": "3.11.10"
+  }
+}
