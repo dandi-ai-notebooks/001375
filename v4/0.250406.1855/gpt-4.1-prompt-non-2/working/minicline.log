@@ -1,0 +1,857 @@
+Using model: openai/gpt-4.1
+Num. messages in conversation: 2
+Submitting completion request...
+Processing response...
+I need to gather detailed information about Dandiset 001375 version 0.250406.1855 to create an appropriate Jupytext notebook (`notebook.py`), as per the plan. The first step is to obtain the Dandiset metadata using the given CLI tool. This will provide essential details for the title, overview, and introductory markdown sections of the notebook.
+
+Tool: execute_command
+Params: {'command': 'python tools_cli.py dandiset-info 001375 --version 0.250406.1855', 'requires_approval': 'false'}
+================================
+Command to be executed
+python tools_cli.py dandiset-info 001375 --version 0.250406.1855
+================================
+{
+  "results": {
+    "id": "DANDI:001375/0.250406.1855",
+    "name": "Septum GABA disruption with DREADDs",
+    "about": [],
+    "access": [
+      {
+        "status": "dandi:OpenAccess",
+        "schemaKey": "AccessRequirements"
+      }
+    ],
+    "license": [
+      "spdx:CC-BY-4.0"
+    ],
+    "version": "0.250406.1855",
+    "citation": "Eckert, Michael; McNaughton, Bruce; Ferbinteanu, Janina (2025) Septum GABA disruption with DREADDs (Version 0.250406.1855) [Data set]. DANDI Archive. https://doi.org/10.48324/dandi.001375/0.250406.1855",
+    "keywords": [],
+    "protocol": [],
+    "identifier": "DANDI:001375",
+    "contributor": [
+      "Eckert, Michael",
+      "NIH Brain",
+      "McNaughton, Bruce",
+      "Ferbinteanu, Janina"
+    ],
+    "dateCreated": "2025-04-05T16:33:36.070433+00:00",
+    "description": "Pilot study of the effect of disrupting septal gabaergic activity using DREADDs on hippocampal and neocortical activity",
+    "variableMeasured": [
+      "Units",
+      "ElectrodeGroup"
+    ],
+    "measurementTechnique": [
+      {
+        "name": "spike sorting technique",
+        "schemaKey": "MeasurementTechniqueType"
+      },
+      {
+        "name": "surgical technique",
+        "schemaKey": "MeasurementTechniqueType"
+      }
+    ]
+  }
+}
+Total prompt tokens: 8218 + 0
+Total completion tokens: 128 + 0
+
+=========================================
+
+execute_command 'python tools_cli.py dandiset-info 001375 --version 0.250406.1855' (requires approval):
+Command executed successfully
+STDOUT:
+{
+  "results": {
+    "id": "DANDI:001375/0.250406.1855",
+    "name": "Septum GABA disruption with DREADDs",
+    "about": [],
+    "access": [
+      {
+        "status": "dandi:OpenAccess",
+        "schemaKey": "AccessRequirements"
+      }
+    ],
+    "license": [
+      "spdx:CC-BY-4.0"
+    ],
+    "version": "0.250406.1855",
+    "citation": "Eckert, Michael; McNaughton, Bruce; Ferbinteanu, Janina (2025) Septum GABA disruption with DREADDs (Version 0.250406.1855) [Data set]. DANDI Archive. https://doi.org/10.48324/dandi.001375/0.250406.1855",
+    "keywords": [],
+    "protocol": [],
+    "identifier": "DANDI:001375",
+    "contributor": [
+      "Eckert, Michael",
+      "NIH Brain",
+      "McNaughton, Bruce",
+      "Ferbinteanu, Janina"
+    ],
+    "dateCreated": "2025-04-05T16:33:36.070433+00:00",
+    "description": "Pilot study of the effect of disrupting septal gabaergic activity using DREADDs on hippocampal and neocortical activity",
+    "variableMeasured": [
+      "Units",
+      "ElectrodeGroup"
+    ],
+    "measurementTechnique": [
+      {
+        "name": "spike sorting technique",
+        "schemaKey": "MeasurementTechniqueType"
+      },
+      {
+        "name": "surgical technique",
+        "schemaKey": "MeasurementTechniqueType"
+      }
+    ]
+  }
+}
+
+=========================================
+
+Using model: openai/gpt-4.1
+Num. messages in conversation: 4
+Submitting completion request...
+Processing response...
+I have obtained the metadata for Dandiset 001375. Next, I need to get the list of assets for this Dandiset using the specified CLI command. This will help me identify NWB files and retrieve their asset IDs and paths, which I will need for the next step.
+
+Tool: execute_command
+Params: {'command': 'python tools_cli.py dandiset-assets 001375 --version 0.250406.1855', 'requires_approval': 'false'}
+================================
+Command to be executed
+python tools_cli.py dandiset-assets 001375 --version 0.250406.1855
+================================
+{
+  "results": {
+    "count": 3,
+    "results": [
+      {
+        "asset_id": "ce525828-8534-4b56-9e47-d2a34d1aa897",
+        "path": "sub-MS13B/sub-MS13B_ses-20240725T190000_ecephys.nwb",
+        "size": 54970745645
+      },
+      {
+        "asset_id": "376dc673-611b-4521-b135-9ec01c7f4f74",
+        "path": "sub-MS14A/sub-MS14A_ses-20240906T190000_obj-12781w8_ecephys.nwb",
+        "size": 69445661969
+      },
+      {
+        "asset_id": "fea95c0e-2f07-49a3-b607-4b7e9f278e16",
+        "path": "sub-MS14A/sub-MS14A_ses-20240906T190000_obj-ardad2_ecephys.nwb",
+        "size": 69788881498
+      }
+    ]
+  }
+}
+Total prompt tokens: 17030 + 0
+Total completion tokens: 238 + 0
+
+=========================================
+
+execute_command 'python tools_cli.py dandiset-assets 001375 --version 0.250406.1855' (requires approval):
+Command executed successfully
+STDOUT:
+{
+  "results": {
+    "count": 3,
+    "results": [
+      {
+        "asset_id": "ce525828-8534-4b56-9e47-d2a34d1aa897",
+        "path": "sub-MS13B/sub-MS13B_ses-20240725T190000_ecephys.nwb",
+        "size": 54970745645
+      },
+      {
+        "asset_id": "376dc673-611b-4521-b135-9ec01c7f4f74",
+        "path": "sub-MS14A/sub-MS14A_ses-20240906T190000_obj-12781w8_ecephys.nwb",
+        "size": 69445661969
+      },
+      {
+        "asset_id": "fea95c0e-2f07-49a3-b607-4b7e9f278e16",
+        "path": "sub-MS14A/sub-MS14A_ses-20240906T190000_obj-ardad2_ecephys.nwb",
+        "size": 69788881498
+      }
+    ]
+  }
+}
+
+=========================================
+
+Using model: openai/gpt-4.1
+Num. messages in conversation: 6
+Submitting completion request...
+Processing response...
+I now have the list of assets (NWB files) for the Dandiset, including their asset IDs and paths. For illustration, I will select the first NWB file: path = "sub-MS13B/sub-MS13B_ses-20240725T190000_ecephys.nwb", asset_id = "ce525828-8534-4b56-9e47-d2a34d1aa897".
+
+The next step is to get information about this NWB file using the prescribed CLI tool and the constructed NWB file URL:
+https://api.dandiarchive.org/api/assets/ce525828-8534-4b56-9e47-d2a34d1aa897/download/
+
+I'll use this URL in the command to extract streaming/usage instructions and metadata, which will inform how to load and present the NWB file in the notebook.
+
+Tool: execute_command
+Params: {'command': 'python tools_cli.py nwb-file-info 001375 https://api.dandiarchive.org/api/assets/ce525828-8534-4b56-9e47-d2a34d1aa897/download/ --version 0.250406.1855', 'requires_approval': 'false'}
+================================
+Command to be executed
+python tools_cli.py nwb-file-info 001375 https://api.dandiarchive.org/api/assets/ce525828-8534-4b56-9e47-d2a34d1aa897/download/ --version 0.250406.1855
+================================
+/home/magland/miniconda3/envs/dev/lib/python3.12/site-packages/hdmf/spec/namespace.py:535: UserWarning: Ignoring cached namespace 'core' version 2.8.0 because version 2.7.0 is already loaded.
+  warn("Ignoring cached namespace '%s' version %s because version %s is already loaded."
+# This script shows how to load the NWB file at https://api.dandiarchive.org/api/assets/ce525828-8534-4b56-9e47-d2a34d1aa897/download/ in Python using PyNWB
+
+import pynwb
+import h5py
+import remfile
+
+# Load
+url = "https://api.dandiarchive.org/api/assets/ce525828-8534-4b56-9e47-d2a34d1aa897/download/"
+remote_file = remfile.File(url)
+h5_file = h5py.File(remote_file)
+io = pynwb.NWBHDF5IO(file=h5_file)
+nwb = io.read()
+
+nwb # (NWBFile)
+nwb.session_description # (str) mouse running laps in virtual hallway
+nwb.identifier # (str) MS13B
+nwb.session_start_time # (datetime) 2024-07-25T19:00:00-07:00
+nwb.timestamps_reference_time # (datetime) 2024-07-25T19:00:00-07:00
+nwb.file_create_date # (list) [datetime.datetime(2025, 4, 5, 16, 50, 15, 663983, tzinfo=tzoffset(None, -25200))]
+nwb.acquisition # (LabelledDict)
+acquisition = nwb.acquisition
+time_series = acquisition["time_series"]
+time_series # (TimeSeries)
+time_series.starting_time # (float64) 0.0
+time_series.rate # (float64) 30000.0
+time_series.resolution # (float64) -1.0
+time_series.comments # (str) no comments
+time_series.description # (str) no description
+time_series.conversion # (float64) 1.0
+time_series.offset # (float64) 0.0
+time_series.unit # (str) mV
+time_series.data # (Dataset) shape (144675584, 256); dtype int16
+# time_series.data[:, :] # Access all data
+# time_series.data[0:n, :] # Access first n rows
+# time_series.data[:, 0:n] # Access first n columns
+time_series.starting_time_unit # (str) seconds
+nwb.electrode_groups # (LabelledDict)
+electrode_groups = nwb.electrode_groups
+shank1 = electrode_groups["shank1"]
+shank1 # (ElectrodeGroup)
+shank1.description # (str) shank1, electrodes
+shank1.location # (str) ventral hippocampus, visual cortex
+shank1.device # (Device)
+shank1.device.description # (str) 128 ch silicon probe
+shank1.device.manufacturer # (str) UCLA
+shank2 = electrode_groups["shank2"]
+shank2 # (ElectrodeGroup)
+shank2.description # (str) shank2, electrodes
+shank2.location # (str) ventral hippocampus, visual cortex
+shank2.device # (Device)
+shank2.device.description # (str) 128 ch silicon probe
+shank2.device.manufacturer # (str) UCLA
+nwb.devices # (LabelledDict)
+devices = nwb.devices
+silicon_probe_array = devices["silicon probe array"]
+silicon_probe_array # (Device)
+silicon_probe_array.description # (str) 128 ch silicon probe
+silicon_probe_array.manufacturer # (str) UCLA
+nwb.intervals # (LabelledDict)
+intervals = nwb.intervals
+trials = intervals["trials"]
+trials # (TimeIntervals)
+trials.description # (str) trial start/stop times
+trials.colnames # (tuple) ['start_time', 'stop_time']
+trials.columns # (tuple)
+trials.id # (ElementIdentifiers)
+# trials.to_dataframe() # (DataFrame) Convert to a pandas DataFrame with 387 rows and 2 columns
+# trials.to_dataframe().head() # (DataFrame) Show the first few rows of the pandas DataFrame
+trials.start_time # (VectorData) start time of lap
+trials.stop_time # (VectorData) end time of lap
+nwb.electrodes # (DynamicTable)
+nwb.electrodes.description # (str) all electrodes
+nwb.electrodes.colnames # (tuple) ['x', 'y', 'location', 'filtering', 'group', 'group_name', 'label']
+nwb.electrodes.columns # (tuple)
+nwb.electrodes.id # (ElementIdentifiers)
+# nwb.electrodes.to_dataframe() # (DataFrame) Convert to a pandas DataFrame with 256 rows and 7 columns
+# nwb.electrodes.to_dataframe().head() # (DataFrame) Show the first few rows of the pandas DataFrame
+nwb.electrodes.x # (VectorData) AUTOGENERATED description for column `x`
+nwb.electrodes.y # (VectorData) AUTOGENERATED description for column `y`
+nwb.electrodes.location # (VectorData) AUTOGENERATED description for column `location`
+nwb.electrodes.filtering # (VectorData) AUTOGENERATED description for column `filtering`
+nwb.electrodes.group # (VectorData) AUTOGENERATED description for column `group`
+nwb.electrodes.group_name # (VectorData) AUTOGENERATED description for column `group_name`
+nwb.electrodes.label # (VectorData) AUTOGENERATED description for column `label`
+nwb.subject # (Subject)
+nwb.subject.age # (str) P90D
+nwb.subject.age__reference # (str) birth
+nwb.subject.description # (str) medial septum DREADD to suppress GABA interneurons
+nwb.subject.sex # (str) M
+nwb.subject.species # (str) Mus musculus
+nwb.subject.subject_id # (str) MS13B
+nwb.trials # (TimeIntervals)
+nwb.trials.description # (str) trial start/stop times
+nwb.trials.colnames # (tuple) ['start_time', 'stop_time']
+nwb.trials.columns # (tuple)
+nwb.trials.id # (ElementIdentifiers)
+# nwb.trials.to_dataframe() # (DataFrame) Convert to a pandas DataFrame with 387 rows and 2 columns
+# nwb.trials.to_dataframe().head() # (DataFrame) Show the first few rows of the pandas DataFrame
+nwb.trials.start_time # (VectorData) start time of lap
+nwb.trials.stop_time # (VectorData) end time of lap
+nwb.units # (Units)
+nwb.units.description # (str) units table
+nwb.units.colnames # (tuple) ['spike_times']
+nwb.units.columns # (tuple)
+nwb.units.waveform_unit # (str) volts
+nwb.units.id # (ElementIdentifiers)
+# nwb.units.to_dataframe() # (DataFrame) Convert to a pandas DataFrame with 33 rows and 2 columns
+# nwb.units.to_dataframe().head() # (DataFrame) Show the first few rows of the pandas DataFrame
+nwb.units.spike_times # (VectorIndex) Index for VectorData 'spike_times'
+# nwb.units.spike_times_index[0] # (ndarray)
+# nwb.units.spike_times_index[1] # (ndarray)
+# nwb.units.spike_times_index[2] # (ndarray)
+# nwb.units.spike_times_index[3] # (ndarray)
+# ...
+Total prompt tokens: 26279 + 0
+Total completion tokens: 505 + 0
+
+=========================================
+
+execute_command 'python tools_cli.py nwb-file-info 001375 https://api.dandiarchive.org/api/assets/ce525828-8534-4b56-9e47-d2a34d1aa897/download/ --version 0.250406.1855' (requires approval):
+Command executed successfully
+STDOUT:
+# This script shows how to load the NWB file at https://api.dandiarchive.org/api/assets/ce525828-8534-4b56-9e47-d2a34d1aa897/download/ in Python using PyNWB
+
+import pynwb
+import h5py
+import remfile
+
+# Load
+url = "https://api.dandiarchive.org/api/assets/ce525828-8534-4b56-9e47-d2a34d1aa897/download/"
+remote_file = remfile.File(url)
+h5_file = h5py.File(remote_file)
+io = pynwb.NWBHDF5IO(file=h5_file)
+nwb = io.read()
+
+nwb # (NWBFile)
+nwb.session_description # (str) mouse running laps in virtual hallway
+nwb.identifier # (str) MS13B
+nwb.session_start_time # (datetime) 2024-07-25T19:00:00-07:00
+nwb.timestamps_reference_time # (datetime) 2024-07-25T19:00:00-07:00
+nwb.file_create_date # (list) [datetime.datetime(2025, 4, 5, 16, 50, 15, 663983, tzinfo=tzoffset(None, -25200))]
+nwb.acquisition # (LabelledDict)
+acquisition = nwb.acquisition
+time_series = acquisition["time_series"]
+time_series # (TimeSeries)
+time_series.starting_time # (float64) 0.0
+time_series.rate # (float64) 30000.0
+time_series.resolution # (float64) -1.0
+time_series.comments # (str) no comments
+time_series.description # (str) no description
+time_series.conversion # (float64) 1.0
+time_series.offset # (float64) 0.0
+time_series.unit # (str) mV
+time_series.data # (Dataset) shape (144675584, 256); dtype int16
+# time_series.data[:, :] # Access all data
+# time_series.data[0:n, :] # Access first n rows
+# time_series.data[:, 0:n] # Access first n columns
+time_series.starting_time_unit # (str) seconds
+nwb.electrode_groups # (LabelledDict)
+electrode_groups = nwb.electrode_groups
+shank1 = electrode_groups["shank1"]
+shank1 # (ElectrodeGroup)
+shank1.description # (str) shank1, electrodes
+shank1.location # (str) ventral hippocampus, visual cortex
+shank1.device # (Device)
+shank1.device.description # (str) 128 ch silicon probe
+shank1.device.manufacturer # (str) UCLA
+shank2 = electrode_groups["shank2"]
+shank2 # (ElectrodeGroup)
+shank2.description # (str) shank2, electrodes
+shank2.location # (str) ventral hippocampus, visual cortex
+shank2.device # (Device)
+shank2.device.description # (str) 128 ch silicon probe
+shank2.device.manufacturer # (str) UCLA
+nwb.devices # (LabelledDict)
+devices = nwb.devices
+silicon_probe_array = devices["silicon probe array"]
+silicon_probe_array # (Device)
+silicon_probe_array.description # (str) 128 ch silicon probe
+silicon_probe_array.manufacturer # (str) UCLA
+nwb.intervals # (LabelledDict)
+intervals = nwb.intervals
+trials = intervals["trials"]
+trials # (TimeIntervals)
+trials.description # (str) trial start/stop times
+trials.colnames # (tuple) ['start_time', 'stop_time']
+trials.columns # (tuple)
+trials.id # (ElementIdentifiers)
+# trials.to_dataframe() # (DataFrame) Convert to a pandas DataFrame with 387 rows and 2 columns
+# trials.to_dataframe().head() # (DataFrame) Show the first few rows of the pandas DataFrame
+trials.start_time # (VectorData) start time of lap
+trials.stop_time # (VectorData) end time of lap
+nwb.electrodes # (DynamicTable)
+nwb.electrodes.description # (str) all electrodes
+nwb.electrodes.colnames # (tuple) ['x', 'y', 'location', 'filtering', 'group', 'group_name', 'label']
+nwb.electrodes.columns # (tuple)
+nwb.electrodes.id # (ElementIdentifiers)
+# nwb.electrodes.to_dataframe() # (DataFrame) Convert to a pandas DataFrame with 256 rows and 7 columns
+# nwb.electrodes.to_dataframe().head() # (DataFrame) Show the first few rows of the pandas DataFrame
+nwb.electrodes.x # (VectorData) AUTOGENERATED description for column `x`
+nwb.electrodes.y # (VectorData) AUTOGENERATED description for column `y`
+nwb.electrodes.location # (VectorData) AUTOGENERATED description for column `location`
+nwb.electrodes.filtering # (VectorData) AUTOGENERATED description for column `filtering`
+nwb.electrodes.group # (VectorData) AUTOGENERATED description for column `group`
+nwb.electrodes.group_name # (VectorData) AUTOGENERATED description for column `group_name`
+nwb.electrodes.label # (VectorData) AUTOGENERATED description for column `label`
+nwb.subject # (Subject)
+nwb.subject.age # (str) P90D
+nwb.subject.age__reference # (str) birth
+nwb.subject.description # (str) medial septum DREADD to suppress GABA interneurons
+nwb.subject.sex # (str) M
+nwb.subject.species # (str) Mus musculus
+nwb.subject.subject_id # (str) MS13B
+nwb.trials # (TimeIntervals)
+nwb.trials.description # (str) trial start/stop times
+nwb.trials.colnames # (tuple) ['start_time', 'stop_time']
+nwb.trials.columns # (tuple)
+nwb.trials.id # (ElementIdentifiers)
+# nwb.trials.to_dataframe() # (DataFrame) Convert to a pandas DataFrame with 387 rows and 2 columns
+# nwb.trials.to_dataframe().head() # (DataFrame) Show the first few rows of the pandas DataFrame
+nwb.trials.start_time # (VectorData) start time of lap
+nwb.trials.stop_time # (VectorData) end time of lap
+nwb.units # (Units)
+nwb.units.description # (str) units table
+nwb.units.colnames # (tuple) ['spike_times']
+nwb.units.columns # (tuple)
+nwb.units.waveform_unit # (str) volts
+nwb.units.id # (ElementIdentifiers)
+# nwb.units.to_dataframe() # (DataFrame) Convert to a pandas DataFrame with 33 rows and 2 columns
+# nwb.units.to_dataframe().head() # (DataFrame) Show the first few rows of the pandas DataFrame
+nwb.units.spike_times # (VectorIndex) Index for VectorData 'spike_times'
+# nwb.units.spike_times_index[0] # (ndarray)
+# nwb.units.spike_times_index[1] # (ndarray)
+# nwb.units.spike_times_index[2] # (ndarray)
+# nwb.units.spike_times_index[3] # (ndarray)
+# ...
+
+STDERR:
+/home/magland/miniconda3/envs/dev/lib/python3.12/site-packages/hdmf/spec/namespace.py:535: UserWarning: Ignoring cached namespace 'core' version 2.8.0 because version 2.7.0 is already loaded.
+  warn("Ignoring cached namespace '%s' version %s because version %s is already loaded."
+
+=========================================
+
+Using model: openai/gpt-4.1
+Num. messages in conversation: 8
+Submitting completion request...
+Processing response...
+I now have all the required information about the Dandiset and its NWB files, and I also have detailed usage guidance for loading the example NWB file, including hints for safe data access and key metadata fields. 
+
+My next step is to create the Jupytext notebook (`notebook.py`) following the user's detailed structure and incorporating the findings:
+
+- Title with the Dandiset name and ID.
+- Disclaimer about AI-generated content.
+- Overview, link to the Dandiset, and notebook summary.
+- Required packages listing.
+- Code to load Dandiset metadata and assets via DANDI API.
+- Explicit code to load and explore the selected NWB file, including links, summaries, and appropriately visualizing or tabulating the file contents (with clear explanations and keeping data loads manageable).
+- Useful illustrative analyses of data from the NWB file as per the usage script and sample fields above.
+- Summaries, future directions and guidance markdown.
+
+The notebook will include comments in code cells for clarity and markdown for context and explanation.
+
+I will now proceed to write the Jupytext notebook (`notebook.py`).
+
+Tool: write_to_file
+Params: {'path': 'notebook.py', 'content': '# %% [markdown]\n# # Exploring Dandiset 001375: Septum GABA disruption with DREADDs\n#\n# **AI-generated notebook**  \n# :warning: *This notebook was automatically generated by an AI and has not been fully verified by a researcher. Please use caution when interpreting the code or results, and cross-check with the data documentation as needed.*\n#\n# ---\n#\n# ## Overview\n#\n# This notebook provides an interactive exploration of the Dandiset [Septum GABA disruption with DREADDs](https://dandiarchive.org/dandiset/001375/0.250406.1855) (version 0.250406.1855). This study investigates the effect of disrupting septal GABAergic activity using DREADDs on hippocampal and neocortical activity in mice. The data includes electrophysiological recordings and spike sorting results stored in NWB files.\n#\n# **Link to Dandiset:**  \n# [https://dandiarchive.org/dandiset/001375/0.250406.1855](https://dandiarchive.org/dandiset/001375/0.250406.1855)\n#\n# ---\n#\n# ## What this notebook covers\n#\n# - Summary and metadata of the Dandiset.\n# - Overview of available assets (files).\n# - How to programmatically access and examine the NWB files in this dataset using the DANDI API, PyNWB, h5py, and remfile.\n# - Guided walkthrough of key data in an example NWB file, including subject details, experimental trials, electrodes, and spike unit tables.\n# - Example visualizations and outputs to illustrate working with the data.\n# - Next steps and possible directions for further analysis.\n#\n# The aim is to help you hit the ground running by understanding the Dandiset structure and learning how to access, summarize, and visualize its data.\n\n# %% [markdown]\n# ## Required packages\n#\n# The following Python packages are required to run this notebook:\n#\n# - numpy\n# - pandas\n# - matplotlib\n# - pynwb\n# - h5py\n# - remfile\n# - dandi\n# - seaborn\n#\n# _All are assumed to be installed on your system._\n\n# %%\n# Imports\nimport numpy as np\nimport pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nfrom itertools import islice\n\n# For Dandiset and NWB access\nfrom dandi.dandiapi import DandiAPIClient\nimport pynwb\nimport h5py\nimport remfile\n\nsns.set_theme()  # Styling for non-image plots\n\n# %% [markdown]\n# ## Load Dandiset metadata using the DANDI API\n\n# %%\n# Connect to DANDI archive and fetch the Dandiset\nclient = DandiAPIClient()\ndandiset = client.get_dandiset("001375", "0.250406.1855")\nmetadata = dandiset.get_raw_metadata()\n\nprint(f"Dandiset name: {metadata[\'name\']}")\nprint(f"Dandiset URL: {metadata.get(\'url\', \'https://dandiarchive.org/dandiset/001375/0.250406.1855\')}")\nprint(f"Description: {metadata.get(\'description\', \'\')}")\nprint(f"Contributors: {metadata.get(\'contributor\', [])}")\nprint(f"Date Created: {metadata.get(\'dateCreated\', \'\')}")\nprint(f"License: {metadata.get(\'license\', [])}")\nprint(f"Measurement Techniques: {[t[\'name\'] for t in metadata.get(\'measurementTechnique\', [])]}")\nprint(f"Variables measured: {metadata.get(\'variableMeasured\', [])}")\n\n# %% [markdown]\n# ## List available assets in the Dandiset\n\n# %%\n# List first 5 assets in the Dandiset for inspection\nassets = list(dandiset.get_assets())\nprint("\\nFirst 5 assets:")\nfor asset in islice(assets, 5):\n    print(f"- {asset.path} (ID: {asset.identifier}, Size: {asset.size} bytes)")\n\n# %% [markdown]\n# ### Files available for analysis\n#\n# For illustration, this notebook will use the following NWB file:\n#\n# **Path:** `sub-MS13B/sub-MS13B_ses-20240725T190000_ecephys.nwb`  \n# **Asset ID:** `ce525828-8534-4b56-9e47-d2a34d1aa897`  \n#\n# **Direct download URL:**  \n# https://api.dandiarchive.org/api/assets/ce525828-8534-4b56-9e47-d2a34d1aa897/download/\n#\n# **[Explore this NWB file in Neurosift](https://neurosift.app/nwb?url=https://api.dandiarchive.org/api/assets/ce525828-8534-4b56-9e47-d2a34d1aa897/download/&dandisetId=001375&dandisetVersion=draft)**\n#\n# *(To analyze other files, update the asset_id/path in the relevant code cells below.)*\n\n# %% [markdown]\n# ## Load and summarize the NWB file\n#\n# We will illustrate data access from the selected file above. This code shows how to stream the file directly from the DANDI Archive using `remfile` with `h5py` and `pynwb`.\n#\n# **Note:** Only certain metadata and small data subsets are loaded for demonstration, due to file size. Loading all raw data or timestamps may be impractical.\n#\n# The approach follows best practices for streaming remote NWB files.\n\n# %%\n# Load the NWB file from DANDI (remotely)\nnwb_url = "https://api.dandiarchive.org/api/assets/ce525828-8534-4b56-9e47-d2a34d1aa897/download/"\nremote_file = remfile.File(nwb_url)\nh5_file = h5py.File(remote_file)\nio = pynwb.NWBHDF5IO(file=h5_file)\nnwb = io.read()\n\n# Summarize the NWB file\'s session metadata\nprint(f"Session description: {nwb.session_description}")\nprint(f"Identifier: {nwb.identifier}")\nprint(f"Session start time: {nwb.session_start_time}")\nprint(f"Subject ID: {getattr(nwb.subject, \'subject_id\', None)}")\nprint(f"Subject species: {getattr(nwb.subject, \'species\', None)}")\nprint(f"Subject sex: {getattr(nwb.subject, \'sex\', None)}")\nprint(f"Number of trials: {len(getattr(nwb.trials, \'id\', [])) if nwb.trials else \'N/A\'}")\nprint(f"Number of electrodes: {len(getattr(nwb.electrodes, \'id\', [])) if nwb.electrodes else \'N/A\'}")\nprint(f"Number of units: {len(getattr(nwb.units, \'id\', [])) if nwb.units else \'N/A\'}")\n\n# %% [markdown]\n# ### High-level NWB file structure\n#\n# ```\n# NWBFile\n# ├── session_description: mouse running laps in virtual hallway\n# ├── identifier: MS13B\n# ├── subject\n# │   ├── subject_id: MS13B\n# │   ├── species: Mus musculus\n# │   ├── sex: M\n# │   ├── age: P90D\n# │   ├── description: medial septum DREADD to suppress GABA interneurons\n# ├── devices\n# │   └── silicon probe array (128 ch silicon probe, UCLA)\n# ├── electrode_groups\n# │   ├── shank1: ventral hippocampus, visual cortex\n# │   └── shank2: ventral hippocampus, visual cortex\n# ├── electrodes: table (256 rows × 7 columns)\n# ├── intervals\n# │   └── trials: table (387 rows × 2 columns)\n# ├── acquisition\n# │   └── time_series: (144,675,584 × 256 int16 data)\n# └── units: (33 single units)\n# ```\n#\n# The NWB file contains rich metadata and large-scale extracellular electrophysiology. Below, we explore several key tables and dimensions.\n\n# %% [markdown]\n# ## Subject and session metadata\n\n# %%\n# Extract subject information\nsubject = nwb.subject\nprint(f"Subject ID: {getattr(subject, \'subject_id\', None)}")\nprint(f"Species: {getattr(subject, \'species\', None)}")\nprint(f"Sex: {getattr(subject, \'sex\', None)}")\nprint(f"Age: {getattr(subject, \'age\', None)}")\nprint(f"Description: {getattr(subject, \'description\', None)}")\n\nprint("\\nSession info:")\nprint(f"Description: {nwb.session_description}")\nprint(f"Start time: {nwb.session_start_time}")\nprint(f"Timestamps reference time: {nwb.timestamps_reference_time}")\nprint(f"File creation date: {nwb.file_create_date}")\n\n# %% [markdown]\n# ## Trial intervals table\n#\n# The trials table defines start and stop times (in seconds) for each trial/lap.  \n# Let\'s show the first few trials.\n\n# %%\ntrials_df = nwb.trials.to_dataframe()\nprint("First 5 trials:")\ndisplay(trials_df.head())\n\n# Visualize trial durations\ntrial_durations = trials_df[\'stop_time\'] - trials_df[\'start_time\']\nplt.figure(figsize=(8, 3))\nplt.hist(trial_durations, bins=30, color=\'skyblue\')\nplt.xlabel(\'Trial Duration (s)\')\nplt.ylabel(\'Count\')\nplt.title(\'Distribution of Trial Durations\')\nplt.tight_layout()\nplt.show()\n\n# %% [markdown]\n# ## Electrode table\n#\n# The electrodes table describes each contact\'s position and group.  \n# Let\'s see the first few electrodes.\n\n# %%\nelec_df = nwb.electrodes.to_dataframe()\nprint("First 5 electrodes:")\ndisplay(elec_df.head())\n\n# Visualize electrode positions if available\nif \'x\' in elec_df.columns and \'y\' in elec_df.columns:\n    plt.figure(figsize=(6, 6))\n    plt.scatter(elec_df[\'x\'], elec_df[\'y\'], alpha=0.6)\n    plt.xlabel(\'x\')\n    plt.ylabel(\'y\')\n    plt.title(\'Electrode Positions\')\n    plt.tight_layout()\n    plt.show()\n\n# %% [markdown]\n# ## Device and electrode groups summary\n\n# %%\n# Device\nif hasattr(nwb, \'devices\'):\n    for dev_name, device in nwb.devices.items():\n        print(f"Device: {dev_name}\\n  Description: {getattr(device, \'description\', \'\')}\\n  Manufacturer: {getattr(device, \'manufacturer\', \'\')}")\n\n# Electrode groups\nif hasattr(nwb, \'electrode_groups\'):\n    for eg_name, eg in nwb.electrode_groups.items():\n        print(f"Electrode Group: {eg_name}\\n  Description: {getattr(eg, \'description\', \'\')}\\n  Location: {getattr(eg, \'location\', \'\')}\\n  Device: {getattr(eg.device, \'description\', \'\')}")\n\n# %% [markdown]\n# ## Units (Single-Unit Table)\n#\n# Spike-sorted units and their spike times are in the units table.  \n# Let\'s show a summary and plot spike counts of the first few units.\n\n# %%\nunits_df = nwb.units.to_dataframe()\nprint("First 5 units:")\ndisplay(units_df.head())\n\n# Compute spike counts per unit (number of spike times)\nspike_counts = [len(nwb.units[\'spike_times\'][i]) for i in range(len(nwb.units[\'id\']))]\n\n# Plot spike counts\nplt.figure(figsize=(8, 4))\nplt.bar(np.arange(len(spike_counts)), spike_counts)\nplt.xlabel(\'Unit Index\')\nplt.ylabel(\'Spike Count\')\nplt.title(\'Spike Counts per Unit\')\nplt.tight_layout()\nplt.show()\n\n# %% [markdown]\n# ## Raw data: Previewing a segment of extracellular data\n#\n# The acquisition field contains a very large data matrix of extracellular recordings.  \n# For illustration **we will only load and visualize a small subset** (first 1 sec, first 8 channels).\n#\n# **Caution**: Loading large segments remotely may be slow.\n\n# %%\n# Access time series dataset\nts = nwb.acquisition[\'time_series\']\n\n# Metadata\nprint(f"Time series shape: {ts.data.shape}, dtype: {ts.data.dtype}")\nprint(f"Starting time: {ts.starting_time} s; Sampling rate: {ts.rate} Hz")\n\n# Load small segment for illustration\nsample_rate = ts.rate\nn_chans = min(ts.data.shape[1], 8)\nn_samples = int(1.0 * sample_rate)  # 1 second\ndata_segment = ts.data[:n_samples, :n_chans]  # shape (n_samples, n_chans)\n\ntime_axis = np.arange(n_samples) / sample_rate\n\nplt.figure(figsize=(10, 6))\noffset = np.arange(n_chans) * 200  # offset for visibility\nfor ch in range(n_chans):\n    plt.plot(time_axis, data_segment[:, ch] + offset[ch], label=f\'Ch {ch}\')\nplt.xlabel(\'Time (s)\')\nplt.ylabel(\'Channel (offset)\')\nplt.title(\'Raw Extraceullular Data\\n(First 1 sec, 8 channels)\')\nplt.tight_layout()\nplt.show()\n\n# %% [markdown]\n# ## Advanced: Raster plot of spikes for selected units and trials\n#\n# As an illustration, let’s show a raster plot of spike times for the first 5 units during the first 10 trials.\n\n# %%\nselected_units = np.arange(min(5, len(nwb.units[\'id\'])))\nselected_trials = trials_df.iloc[:10]\n\nplt.figure(figsize=(12, 5))\nfor i_unit, unit_idx in enumerate(selected_units):\n    spikes = nwb.units[\'spike_times\'][unit_idx]\n    for _, trial in selected_trials.iterrows():\n        # Plot only spikes occurring in this trial interval\n        spikes_in_trial = spikes[(spikes >= trial[\'start_time\']) & (spikes < trial[\'stop_time\'])]\n        trial_number = selected_trials.index.get_loc(trial.name)\n        plt.scatter(spikes_in_trial, np.ones_like(spikes_in_trial)*i_unit + trial_number*0.1,\n                    s=5, label=f\'Unit {i_unit}\' if trial_number==0 else "", alpha=0.7)\n\nplt.xlabel(\'Time (s)\')\nplt.ylabel(\'Unit / Trial\')\nplt.title(\'Raster plot: Spike times of first 5 units during first 10 trials\')\nplt.tight_layout()\nplt.show()\n\n# %% [markdown]\n# ## Summary and next steps\n#\n# - This notebook illustrated how to access the Dandiset [001375](https://dandiarchive.org/dandiset/001375/0.250406.1855), explore its rich electrophysiology data, and visualize basic features such as trials, electrodes, units, and raw traces.\n# - All code for accessing remote NWB data is demonstrated with concrete examples; you may adapt it for other assets or larger scopes as needed.\n# - For further analysis, you may want to:\n#   - Perform more detailed spike sorting quality assessment.\n#   - Analyze firing rates aligned to behavior or trial structure.\n#   - Assess waveforms, electrode spatial activity patterns, or trial-specific responses.\n#   - Explore additional assets in the Dandiset for comparative studies.\n#\n# Be mindful that because of large file sizes, working with small, targeted data subsets is typically best for interactive analysis.\n#\n# For more info or advanced topics, consult the [DANDI documentation](https://www.dandiarchive.org/handbook/) and PyNWB docs.\n\n# %% [markdown]\n# ---\n# _Notebook created automatically via AI for initial exploration. Please double-check results and code before using for research conclusions!_'}
+================================
+Content to be written to notebook.py:
+# %% [markdown]
+# # Exploring Dandiset 001375: Septum GABA disruption with DREADDs
+#
+# **AI-generated notebook**  
+# :warning: *This notebook was automatically generated by an AI and has not been fully verified by a researcher. Please use caution when interpreting the code or results, and cross-check with the data documentation as needed.*
+#
+# ---
+#
+# ## Overview
+#
+# This notebook provides an interactive exploration of the Dandiset [Septum GABA disruption with DREADDs](https://dandiarchive.org/dandiset/001375/0.250406.1855) (version 0.250406.1855). This study investigates the effect of disrupting septal GABAergic activity using DREADDs on hippocampal and neocortical activity in mice. The data includes electrophysiological recordings and spike sorting results stored in NWB files.
+#
+# **Link to Dandiset:**  
+# [https://dandiarchive.org/dandiset/001375/0.250406.1855](https://dandiarchive.org/dandiset/001375/0.250406.1855)
+#
+# ---
+#
+# ## What this notebook covers
+#
+# - Summary and metadata of the Dandiset.
+# - Overview of available assets (files).
+# - How to programmatically access and examine the NWB files in this dataset using the DANDI API, PyNWB, h5py, and remfile.
+# - Guided walkthrough of key data in an example NWB file, including subject details, experimental trials, electrodes, and spike unit tables.
+# - Example visualizations and outputs to illustrate working with the data.
+# - Next steps and possible directions for further analysis.
+#
+# The aim is to help you hit the ground running by understanding the Dandiset structure and learning how to access, summarize, and visualize its data.
+
+# %% [markdown]
+# ## Required packages
+#
+# The following Python packages are required to run this notebook:
+#
+# - numpy
+# - pandas
+# - matplotlib
+# - pynwb
+# - h5py
+# - remfile
+# - dandi
+# - seaborn
+#
+# _All are assumed to be installed on your system._
+
+# %%
+# Imports
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+from itertools import islice
+
+# For Dandiset and NWB access
+from dandi.dandiapi import DandiAPIClient
+import pynwb
+import h5py
+import remfile
+
+sns.set_theme()  # Styling for non-image plots
+
+# %% [markdown]
+# ## Load Dandiset metadata using the DANDI API
+
+# %%
+# Connect to DANDI archive and fetch the Dandiset
+client = DandiAPIClient()
+dandiset = client.get_dandiset("001375", "0.250406.1855")
+metadata = dandiset.get_raw_metadata()
+
+print(f"Dandiset name: {metadata['name']}")
+print(f"Dandiset URL: {metadata.get('url', 'https://dandiarchive.org/dandiset/001375/0.250406.1855')}")
+print(f"Description: {metadata.get('description', '')}")
+print(f"Contributors: {metadata.get('contributor', [])}")
+print(f"Date Created: {metadata.get('dateCreated', '')}")
+print(f"License: {metadata.get('license', [])}")
+print(f"Measurement Techniques: {[t['name'] for t in metadata.get('measurementTechnique', [])]}")
+print(f"Variables measured: {metadata.get('variableMeasured', [])}")
+
+# %% [markdown]
+# ## List available assets in the Dandiset
+
+# %%
+# List first 5 assets in the Dandiset for inspection
+assets = list(dandiset.get_assets())
+print("\nFirst 5 assets:")
+for asset in islice(assets, 5):
+    print(f"- {asset.path} (ID: {asset.identifier}, Size: {asset.size} bytes)")
+
+# %% [markdown]
+# ### Files available for analysis
+#
+# For illustration, this notebook will use the following NWB file:
+#
+# **Path:** `sub-MS13B/sub-MS13B_ses-20240725T190000_ecephys.nwb`  
+# **Asset ID:** `ce525828-8534-4b56-9e47-d2a34d1aa897`  
+#
+# **Direct download URL:**  
+# https://api.dandiarchive.org/api/assets/ce525828-8534-4b56-9e47-d2a34d1aa897/download/
+#
+# **[Explore this NWB file in Neurosift](https://neurosift.app/nwb?url=https://api.dandiarchive.org/api/assets/ce525828-8534-4b56-9e47-d2a34d1aa897/download/&dandisetId=001375&dandisetVersion=draft)**
+#
+# *(To analyze other files, update the asset_id/path in the relevant code cells below.)*
+
+# %% [markdown]
+# ## Load and summarize the NWB file
+#
+# We will illustrate data access from the selected file above. This code shows how to stream the file directly from the DANDI Archive using `remfile` with `h5py` and `pynwb`.
+#
+# **Note:** Only certain metadata and small data subsets are loaded for demonstration, due to file size. Loading all raw data or timestamps may be impractical.
+#
+# The approach follows best practices for streaming remote NWB files.
+
+# %%
+# Load the NWB file from DANDI (remotely)
+nwb_url = "https://api.dandiarchive.org/api/assets/ce525828-8534-4b56-9e47-d2a34d1aa897/download/"
+remote_file = remfile.File(nwb_url)
+h5_file = h5py.File(remote_file)
+io = pynwb.NWBHDF5IO(file=h5_file)
+nwb = io.read()
+
+# Summarize the NWB file's session metadata
+print(f"Session description: {nwb.session_description}")
+print(f"Identifier: {nwb.identifier}")
+print(f"Session start time: {nwb.session_start_time}")
+print(f"Subject ID: {getattr(nwb.subject, 'subject_id', None)}")
+print(f"Subject species: {getattr(nwb.subject, 'species', None)}")
+print(f"Subject sex: {getattr(nwb.subject, 'sex', None)}")
+print(f"Number of trials: {len(getattr(nwb.trials, 'id', [])) if nwb.trials else 'N/A'}")
+print(f"Number of electrodes: {len(getattr(nwb.electrodes, 'id', [])) if nwb.electrodes else 'N/A'}")
+print(f"Number of units: {len(getattr(nwb.units, 'id', [])) if nwb.units else 'N/A'}")
+
+# %% [markdown]
+# ### High-level NWB file structure
+#
+# ```
+# NWBFile
+# ├── session_description: mouse running laps in virtual hallway
+# ├── identifier: MS13B
+# ├── subject
+# │   ├── subject_id: MS13B
+# │   ├── species: Mus musculus
+# │   ├── sex: M
+# │   ├── age: P90D
+# │   ├── description: medial septum DREADD to suppress GABA interneurons
+# ├── devices
+# │   └── silicon probe array (128 ch silicon probe, UCLA)
+# ├── electrode_groups
+# │   ├── shank1: ventral hippocampus, visual cortex
+# │   └── shank2: ventral hippocampus, visual cortex
+# ├── electrodes: table (256 rows × 7 columns)
+# ├── intervals
+# │   └── trials: table (387 rows × 2 columns)
+# ├── acquisition
+# │   └── time_series: (144,675,584 × 256 int16 data)
+# └── units: (33 single units)
+# ```
+#
+# The NWB file contains rich metadata and large-scale extracellular electrophysiology. Below, we explore several key tables and dimensions.
+
+# %% [markdown]
+# ## Subject and session metadata
+
+# %%
+# Extract subject information
+subject = nwb.subject
+print(f"Subject ID: {getattr(subject, 'subject_id', None)}")
+print(f"Species: {getattr(subject, 'species', None)}")
+print(f"Sex: {getattr(subject, 'sex', None)}")
+print(f"Age: {getattr(subject, 'age', None)}")
+print(f"Description: {getattr(subject, 'description', None)}")
+
+print("\nSession info:")
+print(f"Description: {nwb.session_description}")
+print(f"Start time: {nwb.session_start_time}")
+print(f"Timestamps reference time: {nwb.timestamps_reference_time}")
+print(f"File creation date: {nwb.file_create_date}")
+
+# %% [markdown]
+# ## Trial intervals table
+#
+# The trials table defines start and stop times (in seconds) for each trial/lap.  
+# Let's show the first few trials.
+
+# %%
+trials_df = nwb.trials.to_dataframe()
+print("First 5 trials:")
+display(trials_df.head())
+
+# Visualize trial durations
+trial_durations = trials_df['stop_time'] - trials_df['start_time']
+plt.figure(figsize=(8, 3))
+plt.hist(trial_durations, bins=30, color='skyblue')
+plt.xlabel('Trial Duration (s)')
+plt.ylabel('Count')
+plt.title('Distribution of Trial Durations')
+plt.tight_layout()
+plt.show()
+
+# %% [markdown]
+# ## Electrode table
+#
+# The electrodes table describes each contact's position and group.  
+# Let's see the first few electrodes.
+
+# %%
+elec_df = nwb.electrodes.to_dataframe()
+print("First 5 electrodes:")
+display(elec_df.head())
+
+# Visualize electrode positions if available
+if 'x' in elec_df.columns and 'y' in elec_df.columns:
+    plt.figure(figsize=(6, 6))
+    plt.scatter(elec_df['x'], elec_df['y'], alpha=0.6)
+    plt.xlabel('x')
+    plt.ylabel('y')
+    plt.title('Electrode Positions')
+    plt.tight_layout()
+    plt.show()
+
+# %% [markdown]
+# ## Device and electrode groups summary
+
+# %%
+# Device
+if hasattr(nwb, 'devices'):
+    for dev_name, device in nwb.devices.items():
+        print(f"Device: {dev_name}\n  Description: {getattr(device, 'description', '')}\n  Manufacturer: {getattr(device, 'manufacturer', '')}")
+
+# Electrode groups
+if hasattr(nwb, 'electrode_groups'):
+    for eg_name, eg in nwb.electrode_groups.items():
+        print(f"Electrode Group: {eg_name}\n  Description: {getattr(eg, 'description', '')}\n  Location: {getattr(eg, 'location', '')}\n  Device: {getattr(eg.device, 'description', '')}")
+
+# %% [markdown]
+# ## Units (Single-Unit Table)
+#
+# Spike-sorted units and their spike times are in the units table.  
+# Let's show a summary and plot spike counts of the first few units.
+
+# %%
+units_df = nwb.units.to_dataframe()
+print("First 5 units:")
+display(units_df.head())
+
+# Compute spike counts per unit (number of spike times)
+spike_counts = [len(nwb.units['spike_times'][i]) for i in range(len(nwb.units['id']))]
+
+# Plot spike counts
+plt.figure(figsize=(8, 4))
+plt.bar(np.arange(len(spike_counts)), spike_counts)
+plt.xlabel('Unit Index')
+plt.ylabel('Spike Count')
+plt.title('Spike Counts per Unit')
+plt.tight_layout()
+plt.show()
+
+# %% [markdown]
+# ## Raw data: Previewing a segment of extracellular data
+#
+# The acquisition field contains a very large data matrix of extracellular recordings.  
+# For illustration **we will only load and visualize a small subset** (first 1 sec, first 8 channels).
+#
+# **Caution**: Loading large segments remotely may be slow.
+
+# %%
+# Access time series dataset
+ts = nwb.acquisition['time_series']
+
+# Metadata
+print(f"Time series shape: {ts.data.shape}, dtype: {ts.data.dtype}")
+print(f"Starting time: {ts.starting_time} s; Sampling rate: {ts.rate} Hz")
+
+# Load small segment for illustration
+sample_rate = ts.rate
+n_chans = min(ts.data.shape[1], 8)
+n_samples = int(1.0 * sample_rate)  # 1 second
+data_segment = ts.data[:n_samples, :n_chans]  # shape (n_samples, n_chans)
+
+time_axis = np.arange(n_samples) / sample_rate
+
+plt.figure(figsize=(10, 6))
+offset = np.arange(n_chans) * 200  # offset for visibility
+for ch in range(n_chans):
+    plt.plot(time_axis, data_segment[:, ch] + offset[ch], label=f'Ch {ch}')
+plt.xlabel('Time (s)')
+plt.ylabel('Channel (offset)')
+plt.title('Raw Extraceullular Data\n(First 1 sec, 8 channels)')
+plt.tight_layout()
+plt.show()
+
+# %% [markdown]
+# ## Advanced: Raster plot of spikes for selected units and trials
+#
+# As an illustration, let’s show a raster plot of spike times for the first 5 units during the first 10 trials.
+
+# %%
+selected_units = np.arange(min(5, len(nwb.units['id'])))
+selected_trials = trials_df.iloc[:10]
+
+plt.figure(figsize=(12, 5))
+for i_unit, unit_idx in enumerate(selected_units):
+    spikes = nwb.units['spike_times'][unit_idx]
+    for _, trial in selected_trials.iterrows():
+        # Plot only spikes occurring in this trial interval
+        spikes_in_trial = spikes[(spikes >= trial['start_time']) & (spikes < trial['stop_time'])]
+        trial_number = selected_trials.index.get_loc(trial.name)
+        plt.scatter(spikes_in_trial, np.ones_like(spikes_in_trial)*i_unit + trial_number*0.1,
+                    s=5, label=f'Unit {i_unit}' if trial_number==0 else "", alpha=0.7)
+
+plt.xlabel('Time (s)')
+plt.ylabel('Unit / Trial')
+plt.title('Raster plot: Spike times of first 5 units during first 10 trials')
+plt.tight_layout()
+plt.show()
+
+# %% [markdown]
+# ## Summary and next steps
+#
+# - This notebook illustrated how to access the Dandiset [001375](https://dandiarchive.org/dandiset/001375/0.250406.1855), explore its rich electrophysiology data, and visualize basic features such as trials, electrodes, units, and raw traces.
+# - All code for accessing remote NWB data is demonstrated with concrete examples; you may adapt it for other assets or larger scopes as needed.
+# - For further analysis, you may want to:
+#   - Perform more detailed spike sorting quality assessment.
+#   - Analyze firing rates aligned to behavior or trial structure.
+#   - Assess waveforms, electrode spatial activity patterns, or trial-specific responses.
+#   - Explore additional assets in the Dandiset for comparative studies.
+#
+# Be mindful that because of large file sizes, working with small, targeted data subsets is typically best for interactive analysis.
+#
+# For more info or advanced topics, consult the [DANDI documentation](https://www.dandiarchive.org/handbook/) and PyNWB docs.
+
+# %% [markdown]
+# ---
+# _Notebook created automatically via AI for initial exploration. Please double-check results and code before using for research conclusions!_
+================================
+Total prompt tokens: 37616 + 0
+Total completion tokens: 4156 + 0
+
+=========================================
+
+write_to_file for 'notebook.py':
+Successfully wrote 12581 characters to notebook.py
+=========================================
+
+Using model: openai/gpt-4.1
+Num. messages in conversation: 10
+Submitting completion request...
+Processing response...
+The `notebook.py` Jupytext notebook has been created. The next step is to convert it into a Jupyter notebook (`notebook.ipynb`) and execute it in place, allowing errors as instructed. This step will ensure the notebook is both converted and executed as required. The timeout should be set to 600 seconds to handle the large dataset and remote access.
+
+Tool: execute_command
+Params: {'command': 'jupytext --to notebook notebook.py && jupyter execute --inplace --allow-errors notebook.ipynb', 'requires_approval': 'true', 'timeout': '600'}
+================================
+Command to be executed
+jupytext --to notebook notebook.py && jupyter execute --inplace --allow-errors notebook.ipynb
+================================
+/home/magland/.local/lib/python3.12/site-packages/jupytext/cell_reader.py:20: UserWarning: Sphinx Gallery in version 0.19.0 is not supported by Jupytext. Please use sphinx-gallery<=0.7.0 instead. If that is an issue, feel free to report it at https://github.com/mwouts/jupytext/issues, or even better, prepare a PR to handle the new signature of sphinx_gallery.notebook.rst2md.
+  warnings.warn(
+[jupytext] Reading notebook.py in format py
+[jupytext] Writing notebook.ipynb
+[NbClientApp] Executing notebook.ipynb
+[NbClientApp] Executing notebook with kernel: 
+[NbClientApp] Save executed results to notebook.ipynb
+Total prompt tokens: 52669 + 0
+Total completion tokens: 4292 + 0
+
+=========================================
+
+execute_command 'jupytext --to notebook notebook.py && jupyter execute --inplace --allow-errors notebook.ipynb' (requires approval):
+Command executed successfully
+STDOUT:
+[jupytext] Reading notebook.py in format py
+[jupytext] Writing notebook.ipynb
+
+STDERR:
+/home/magland/.local/lib/python3.12/site-packages/jupytext/cell_reader.py:20: UserWarning: Sphinx Gallery in version 0.19.0 is not supported by Jupytext. Please use sphinx-gallery<=0.7.0 instead. If that is an issue, feel free to report it at https://github.com/mwouts/jupytext/issues, or even better, prepare a PR to handle the new signature of sphinx_gallery.notebook.rst2md.
+  warnings.warn(
+[NbClientApp] Executing notebook.ipynb
+[NbClientApp] Executing notebook with kernel: 
+[NbClientApp] Save executed results to notebook.ipynb
+
+=========================================
+
+Using model: openai/gpt-4.1
+Num. messages in conversation: 12
+Submitting completion request...
+Processing response...
+I've confirmed that each required tool use was successful at every step: Dandiset metadata and assets were fetched, NWB usage instructions were obtained, the required notebook was created as `notebook.py`, and it has been converted to and executed as `notebook.ipynb` without interruption. The notebook is now available and contains everything as prescribed in the specification.
+
+Tool: attempt_completion
+Params: {'result': 'The Jupytext notebook `notebook.py` was created following your instructions. It was converted and executed as `notebook.ipynb`. The notebook includes a structured, well-documented workflow for exploring Dandiset 001375 ("Septum GABA disruption with DREADDs"), with explicit code to stream and analyze one of its NWB files, visualizations, explanatory markdown, and clear user guidance. You can now open and review `notebook.ipynb` to get started exploring and analyzing the Dandiset data interactively.', 'command': 'open notebook.ipynb'}
+The Jupytext notebook `notebook.py` was created following your instructions. It was converted and executed as `notebook.ipynb`. The notebook includes a structured, well-documented workflow for exploring Dandiset 001375 ("Septum GABA disruption with DREADDs"), with explicit code to stream and analyze one of its NWB files, visualizations, explanatory markdown, and clear user guidance. You can now open and review `notebook.ipynb` to get started exploring and analyzing the Dandiset data interactively.
+Total prompt tokens: 68120 + 0
+Total completion tokens: 4507 + 0
+
